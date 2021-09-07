@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.word {
+  text-transform: uppercase;
+}
+
+#boggle > table {
+  text-align: center;
+  margin: 10px auto;
+  line-height: 1.5em;
+  letter-spacing: 1.5em;
+}
+.words {
+  margin: auto;
+  display: inline-block;
+  padding-left: 0;
+}
+.navbar {
+  background-color: black;
+  color: white;
+  margin: auto 0;
+  width: 100%;
+}
+input,
+button {
+  line-height: 1.5em;
+}
+button {
+  background-color: blue;
+  color: white;
+}
