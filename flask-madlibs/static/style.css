@@ -1,0 +1,20 @@
+body {
+  background-color: sandybrown;
+}
+section {
+  width: max-content;
+  margin: auto;
+}
+label {
+  display: block;
+  width: 90px;
+  float: left;
+  font-weight: bold;
+}
+button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: rgb(0, 110, 255);
+  color: white;
+  font-weight: bolder;
+}
