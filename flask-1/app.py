@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 app.config["SECRET_KEY"] = "thisIsatestfO(())"
 
-
 @app.route("/")
 def landingpage():
     return render_template("index.html")
@@ -39,14 +38,17 @@ def convert_currency():
         errors = True
         flash("Not a valid amount")
 
-    if not errors:
-        conversion_result = c.convert(
-            currency_from_convert, currency_to_convert, Decimal(request.args["amount"]))
+    try:
+        if not errors:
+            conversion_result = c.convert(
+                currency_from_convert, currency_to_convert, Decimal(request.args["amount"]))
 
-        currency_code = CurrencyCodes()
-        currency_symbol = currency_code.get_symbol(currency_to_convert)
+            currency_code = CurrencyCodes()
+            currency_symbol = currency_code.get_symbol(currency_to_convert)
 
-        converted_currency = "{:.2f}".format(conversion_result)
-        return render_template("result.html", currency_symbol=currency_symbol, converted_currency=converted_currency)
+            converted_currency = "{:.2f}".format(conversion_result)
+            return render_template("result.html", currency_symbol=currency_symbol, converted_currency=converted_currency)
+    except:
+        flash("Not a valid code operation")
 
     return render_template("index.html")
