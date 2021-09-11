@@ -16,6 +16,7 @@ Answer the following questions below:
 - Given a dictionary like `{"a": 1, "b": 2}`: , list two ways you
   can try to get a missing key (like "c") _without_ your programming
   crashing.
+  - **Use try/except code block**
 
 - What is a unit test?
 
@@ -27,12 +28,13 @@ Answer the following questions below:
 
 - What is the role of web application framework, like Flask?
 
-  - **Flask:** Provides the necessary components for web development, such as ****routing**,** ****request handling**,** ****sessions**,**. Also, provides development server and debugger.
+  - **Flask:** Provides the necessary components for web development, such as **routing**, **request handling**, **sessions**, Also, provides development server and debugger.
 
 - You can pass information to Flask either as a parameter in a route URL
   (like '/foods/pretzel') or using a URL query param (like
   'foods?type=pretzel'). How might you choose which one is a better fit
   for an application?
+    
 
 - How do you collect data from a URL placeholder parameter using Flask?
 
