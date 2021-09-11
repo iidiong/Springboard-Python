@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Converter</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+
+    <body>
+        <section class="errors">
+
+
+        </section>
+        <form action="/convert">
+            {% for msg in get_flashed_messages()%}
+            <p class="error-message">{{msg}}</p>
+            {% endfor %}
+            <p>
+                <label for="convert-from">Converting from</label>
+                <input type="text" name="convert-from" required autofocus>
+            </p>
+            <p>
+                <label for="convert-to">Converting to</label>
+                <input type="text" name="convert-to" required>
+            </p>
+            <p>
+                <label for="amount">Amount:</label>
+                <input type="text" name="amount">
+            </p>
+            <p>
+                <button>Convert</button>
+            </p>
+        </form>
+
+
+    </body>
+
+</html>

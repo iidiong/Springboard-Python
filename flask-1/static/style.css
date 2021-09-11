@@ -1,0 +1,31 @@
+body {
+  background-color: lightgray;
+  width: max-content;
+  margin: 100px auto;
+  height: 100vh;
+}
+label {
+  display: block;
+  float: left;
+  width: 115px;
+}
+form {
+  border: 1px solid black;
+  padding: 20px;
+  background-color: white;
+}
+button {
+  background-color: rgb(69, 112, 190);
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+input {
+  text-transform: uppercase;
+}
+.error-message {
+    background-color: rgb(243, 52, 52);
+    color: white;
+    padding: 5px;
+}
