@@ -27,6 +27,14 @@ class FlaskTests(TestCase):
         self.assertEqual(200, response.status_code)
         self.assertIn(b"The result is", response.data)
         self.assertIn(b"Home", response.data)
+        
+    def test_convert_from_usd_to_usd(self):
+        """Test rest converted successfully """
+        response = self.client.get(
+            "/convert?convert-from=usd&convert-to=usd&amount=1")
+        self.assertEqual(200, response.status_code)
+        self.assertIn(b"The result is", response.data)
+        self.assertIn(b"Home", response.data)
 
     def test_empty_amount_field(self):
         """Test empty amount field"""
