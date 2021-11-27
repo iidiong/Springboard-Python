@@ -1,0 +1,57 @@
+#content {
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+input {
+  width: 300px;
+  line-height: 2rem;
+}
+a {
+  text-decoration: none;
+}
+button.addbtn {
+  float: right;
+  background-color: green;
+}
+button.delete {
+  background-color: red;
+}
+button.add {
+  background-color: lightslategrey;
+}
+button > a {
+  color: white;
+}
+button.edit {
+  background-color: blue;
+  margin-right: 0.1rem;
+}
+button {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+}
+.user-image {
+  width: 100vw;
+  display: inline-block;
+  width: 15vw;
+}
+.user-info {
+  width: 100vw;
+  display: inline-block;
+  width: 35vw;
+}
+.cancelBtn {
+  float: right;
+
+  border: 1px solid darkgreen;
+  margin-right: 0.2rem;
+}
+.cancelBtn > a {
+  color: darkgreen;
+}
