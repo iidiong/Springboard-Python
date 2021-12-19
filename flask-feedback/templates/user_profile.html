@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}User Profile{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+
+<main class="w-50 m-auto mt-5">
+    <h1>{{ username }}</h1>
+
+    {% for feedback in feedbacks %}
+    <form action="/feedback/{{feedback.id}}/delete" method="post">
+        <div class="card mb-1">
+            <div class="card-body">
+                <h5 class="card-title">{{ feedback.title }}</h5>
+                <p class="card-text">{{feedback.content}}</p>
+                <p>
+                    <span>by</span>
+                    <small class="text-uppercase text-muted">{{ feedback.username }}</small>
+                </p>
+                {% if session["username"] == feedback.username %}
+                <a href="/feedback/{{feedback.id}}/update" class="card-link">Edit</a>
+                <form action="/feedback/{{feedback.id}}/delete" method="POST">
+                    <button class="btn btn-sm btn-danger mx-3"><i class="far fa-trash-alt"></i></button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+    <div>
+        <a href="/users/{{username}}/feedback/add" class="btn btn-primary mt-3">Add Feedback</a>
+    </div>
+
+</main>
+
+{% endblock %}
