@@ -19,7 +19,7 @@
                     <small class="text-uppercase text-muted">{{ feedback.username }}</small>
                 </p>
                 {% if session["username"] == feedback.username %}
-                <a href="/feedback/{{feedback.id}}/update" class="card-link">Edit</a>
+                <a href="/feedback/{{feedback.id}}/update" class="card-link p-2"><i class="fas fa-user-edit"></i></a>
                 <form action="/feedback/{{feedback.id}}/delete" method="POST">
                     <button class="btn btn-sm btn-danger mx-3"><i class="far fa-trash-alt"></i></button>
                 </form>

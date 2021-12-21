@@ -9,10 +9,13 @@ Routes are protected so that for example user1 cannot edit feedback that user2 c
 
 ## Technology User
 
-    1. Python
-    2. Html
-    3. Flask_SQLAlchemy
-    4. Flask_wtforms
-    5. Flask
-    6. Flask-Bcrypt
-    7. bootstrap
+    * Python
+    * Html
+    * Flask_SQLAlchemy
+    * Flask_wtforms
+    * Flask
+    * Flask-Bcrypt
+    * bootstrap
+    * PostgreSQL
+    * SQLAlchemy
+    * Jinja2
