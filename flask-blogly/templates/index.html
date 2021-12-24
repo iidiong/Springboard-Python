@@ -5,16 +5,18 @@
 {{ super() }}
 {% endblock %}
 {% block content %}
+
+<h1>Users</h1>
 <div class="list-contents">
-    <h1>List of Users</h1>
-    <ul>
+    <ul class="">
         {% for user in users %}
         <p>
-            <li><a href="/users/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></li>
+            <li><a href="/users/{{user.id}}" class="text-decoration-none">{{user.first_name}}
+                    {{user.last_name}}</a></li>
         </p>
         {% endfor %}
     </ul>
 
-    <button class="add"><a href="/users/new">Add User</a></button>
+    <a href="/users/new"><button class="btn btn-secondary">Add User</button></a>
 </div>
 {% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Edit User{% endblock %}
+{% block head %} {{ super() }} {% endblock %}
+{% block content %}
+
+<h1>Edit a user</h1>
+<form action="/users/{{user.id}}/edit" method="post">
+    <p><label class="form-label" for="first_name">First Name</label><br>
+        <input class="form-control" name="first_name" value={{user.first_name}} placeholder="Enter a first name"
+            required>
+    </p>
+    <p><label class="form-label" for="last_name">Last Name</label><br>
+        <input class="form-control" name="last_name" value={{user.last_name}} placeholder="Enter a last name" required>
+    </p>
+    <p><label class="form-label" for="image_url">Image URL</label><br>
+        <input class="form-control" name="image_url" value={{user.image_url}}
+            placeholder="Provide an image of this user" accept="image/*">
+    </p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="/users"><button type="reset" class="btn btn-outline-info">Cancel</button></a>
+        <button type="submit" class="btn btn-success">Save</button>
+    </div>
+</form>
+
+{% endblock %}

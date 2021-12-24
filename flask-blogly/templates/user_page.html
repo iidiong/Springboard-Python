@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}User Details{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+
+<div card mb-3 style="max-width: 740px">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ posts[0].user.image_url }}" alt="{{ posts[0].user.first_name}}" width="240" height="250"
+                srcset="">
+        </div>
+        <div class="col-md-6 ml-0">
+            <div class="card-body">
+                <div>
+                    <h5>{{posts[0].user.first_name}} {{posts[0].user.last_name}}</h5>
+                    <p>
+                        <a href="/posts/{{posts.id}}/edit"><button class="btn btn-primary">Edit</button></a>
+                        <a href="/posts/{{posts.id}}/delete"><button class="btn btn-danger">Delete</button></a>
+                    </p>
+                </div>
+                <div>
+                    <h4>Posts</h4>
+                    <ul>
+                        {% for post in posts %}
+                        <a href="/posts/{{post.id}}" class="text-decoration-none">
+                            <li class="">{{post.title}}</li>
+                        </a>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p>
+                    <a href="/users/{{posts[0].user_id}}/posts/new"><button class="btn btn-primary ">Add
+                            Post</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
